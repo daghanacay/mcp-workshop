@@ -7,6 +7,16 @@ MCP: High-level AI protocol that orchestrates tool usage and maintains context
 
 MCP often uses REST APIs internally, but abstracts them away for the AI. Think of MCP as middleware that turns discrete web services into a cohesive environment the AI can operate within.
 
+# Set up uv - Python package manager
+
+For Linux run:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Detailed instructions can be found here https://docs.astral.sh/uv/getting-started/installation/
+
 # Set up Roo
 
 ## Set up Roo plugin
@@ -49,15 +59,14 @@ I have downloaded the file for you in the source code llms-full.txt. This is the
 
 We will use TS for this implementation so I have downloaded README document from https://github.com/modelcontextprotocol/typescript-sdk, file is saved as README-mcp-typescript.md
 
-# Set up uv - Python package manager
+## Set up knowledge of chainlit as context for your LLM code platform
 
-For Linux run:
+I have copied the README from https://github.com/Chainlit/chainlit, it is called README-chainlit.md.
 
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
+## Set up knowledge of Strand agent as context for your LLM code platform
 
-Detailed instructions can be found here https://docs.astral.sh/uv/getting-started/installation/
+WE will use Strand as our agent (https://strandsagents.com/latest/). I have copied the README from https://github.com/strands-agents/sdk-python. It is called README-strand-agent.md.
+
 
 # Build a server with natural language
 
@@ -206,8 +215,8 @@ So far we have built an MCP server and MCP client, but there is no intelligence 
 ![alt text](images/complete-agentic-mcp-app.png)
 
 We will use:
-- Chainlit for chat app. I have copied the README from https://github.com/Chainlit/chainlit, it is called README-chainlit.md.
-- Strand agent as our agent (https://strandsagents.com/latest/). We do not need to build an MCP client for Strand since it already comes with the client. I have already copied the README from https://github.com/strands-agents/sdk-python. It is called README-strand-agent.md.
+- Chainlit for chat app. 
+- Strand agent as our agent (https://strandsagents.com/latest/). 
 - We will use our good old file server as our MCP server.
 
 In this case, you can use 2 methods to build the code. You need uv installed for this section.
