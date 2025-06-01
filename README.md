@@ -109,7 +109,7 @@ mcp-file-server/
 
 Optional Task: You can continue changing the code and update it as you wish. For example, add new functionality like writing a file.
 
-Once you are happy with the code, check it with the code I have created: `git checkout server-code`
+Once you are happy with the code, check it with the code I have created: `git checkout generated-code`
 
 ## Run MCP inspector to check if the server is working
 
