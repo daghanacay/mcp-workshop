@@ -2,8 +2,8 @@
 
 We are going to build an MCP server and integrate it into multiple agentic applications. MCP can be compared to REST API as discussed here https://docs.roocode.com/features/mcp/mcp-vs-api. In summary, REST APIs and MCP serve different tiers in the technology stack:
 
-REST: Low-level web communication pattern that exposes operations on resources
-MCP: High-level AI protocol that orchestrates tool usage and maintains context
+- REST: Low-level web communication pattern that exposes operations on resources
+- MCP: High-level AI protocol that orchestrates tool usage and maintains context
 
 MCP often uses REST APIs internally, but abstracts them away for the AI. Think of MCP as middleware that turns discrete web services into a cohesive environment the AI can operate within.
 
@@ -65,7 +65,11 @@ I have copied the README from https://github.com/Chainlit/chainlit, it is called
 
 ## Set up knowledge of Strand agent as context for your LLM code platform
 
-WE will use Strand as our agent (https://strandsagents.com/latest/). I have copied the README from https://github.com/strands-agents/sdk-python. It is called README-strand-agent.md.
+We will use Strand as our agent (https://strandsagents.com/latest/). I have copied the README from https://github.com/strands-agents/sdk-python. It is called README-strand-agent.md.
+
+Now we are ready to build our MCP application without writing a single line of code !!
+
+WARNING this will cost you around US$15 using Claude opus 4 to complete the rest of the tutorial. You can use older models if you want to save money. however, I cannot guarantiee the outcome.
 
 
 # Build a server with natural language
@@ -103,7 +107,7 @@ mcp-file-server/
 ```
 
 
-TODO: You can continue changing the code and update it as you wish. For example, add new functionality like writing a file.
+Optional Task: You can continue changing the code and update it as you wish. For example, add new functionality like writing a file.
 
 Once you are happy with the code, check it with the code I have created: `git checkout server-code`
 
@@ -125,7 +129,7 @@ See your server properties at http://127.0.0.1:6274, connect and list tools.
 
 # Let's integrate our server to Roo
 
-Open Roo MCP config, third icon on the top after the "+" sign.
+Open Roo MCP config, second icon on the top after the "+" sign.
 
 ![alt text](images/roo-config.png)
 
@@ -160,10 +164,11 @@ Mine looks like:
   }
 }
 ```
+If you don't get an error, it means it is now configured to use with Roo. You can also inspect the MCP tools in this window.
 
 ![alt text](images/roo-mcp-server.png)
 
-If you don't get an error, it means it is now configured to use with Roo. You can also inspect the MCP tools in this window. If you want to know what MCP tools Roo has access to, use the following on the chat window:
+If you want to know what MCP tools Roo has access to, use the following on the chat window:
 
 - @tools - list all available tools
 - Show me what MCP servers are connected
@@ -186,7 +191,7 @@ Copy and paste the following code to the Roo chat:
 - It should take server executable and server parameters as input
 - It should list the available tools on the MCP server on the console and it should terminate.
 
-Warning: If you get an error saying context exceeds your limit, just start a new task and paste the above code. This should cost you around US$1.5 and 2 minutes to complete. Now you should have a project structure for your client as follows:
+Warning: If you get an error saying context exceeds your limit, just start a new task and paste the above code. This should take 2 minutes to complete. Now you should have a project structure for your client as follows:
 
 ```
 mcp-client/
@@ -262,9 +267,9 @@ If everything goes well, then you will have file-chat-app-from-description. Once
 ./run.sh
 ```
 
-# other MCP tools Make development easier
+# Other MCP tools Make development easier
 
-MCP goes beyond tools, it can help you write code. Until now we have downloaded README.md files to show Roo how to writwe code. How about we have MCP server that helps with that already. In this section we will integrate https://github.com/walmsles/powertools-mcp to help us write better Lambda code
+MCP goes beyond tools, it can help you write code. Until now we have downloaded README.md files to show Roo how to write code. How about we have MCP server that helps with that as well, that is, we do not need to download additional context everytime we want to build some specific code. In this section we will integrate https://github.com/walmsles/powertools-mcp to help us write better Lambda code
 
 TODO michael walmsley
 
