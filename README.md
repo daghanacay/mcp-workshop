@@ -269,13 +269,8 @@ If everything goes well, then you will have file-chat-app-from-description. Once
 
 # Other MCP tools Make development easier
 
-MCP goes beyond tools, it can help you write code. Until now we have downloaded README.md files to show Roo how to write code. How about we have MCP server that helps with that as well, that is, we do not need to download additional context everytime we want to build some specific code. In this section we will integrate https://github.com/walmsles/powertools-mcp to help us write better Lambda code
+MCP goes beyond tools, it can help you write code. Until now we have downloaded README.md files to show Roo how to write code. How about we have MCP server that helps with that as well, that is, we do not need to download additional context everytime we want to build some specific code. Please take a look at the vide in linked post https://www.linkedin.com/posts/walmsles_i-am-super-excited-by-the-recent-release-activity-7329456746404438017-EaCp/. Basically you can add as many documents as you like covering yuor favorite frameworks and let the Roo code take care of the rest!
 
-TODO michael walmsley
-
-add https://github.com/walmsles/powertools-mcp  into 
-- Roo
-- QCLI
-- our file chat bot
-
-and provide NL commands to write lambda code. 
+# other MCP tools you may want to check
+- QCLI: an MCP chat client from AWS - https://aws.amazon.com/blogs/devops/introducing-the-enhanced-command-line-interface-in-amazon-q-developer/
+- Claude desktop: https://claude.ai/download, only for Mac and Windows so far.
